@@ -29,7 +29,7 @@ Follow these steps to install and run the portfolio locally:
 3. Run the following command to clone the repository:
 
     ```shell
-    git clone https://github.com/pablogh89/portfolio.git
+    git clone git@github.com:pablogh89/portfolio.git
     ```
 
 4. Run the following command to open the portfolio folder:
@@ -44,7 +44,8 @@ Follow these steps to install and run the portfolio locally:
     pip install -r requirements
     ```
 
-    > **Note**: if this fails due to access denied, add ``--user`` on Windows or start with ``sudo`` on Linux to solve the problem.
+    !!! note
+        If this fails due to access denied, add ``--user`` on Windows or start with ``sudo`` on Linux to solve the problem.
 
 6. Run the following command to start the portfolio:
 
@@ -52,6 +53,7 @@ Follow these steps to install and run the portfolio locally:
     python mkdocs serve 
     ```
 
-    > **Note**: if this fails, try ``python –m mkdocs serve`` on Windows or ``python3 mkdocs serve`` on Linux to solve the problem.
+    !!! note
+        If this fails, try ``python –m mkdocs serve`` on Windows or ``python3 mkdocs serve`` on Linux to solve the problem.
 
 7. Open a browser and navigate to ``http://localhost:8000/``

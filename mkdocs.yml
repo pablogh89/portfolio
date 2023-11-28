@@ -113,16 +113,9 @@ extra:
     property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
-      link: https://github.com/squidfunk
-    - icon: fontawesome/brands/docker
-      link: https://hub.docker.com/r/squidfunk/mkdocs-material/
+      link: https://github.com/pablogh89
     - icon: fontawesome/brands/python
       link: https://pypi.org/project/mkdocs-material/
-    - icon: fontawesome/brands/mastodon
-      link: https://fosstodon.org/@squidfunk
-    - icon: fontawesome/brands/twitter
-      link: https://twitter.com/squidfunk
-
 # Extensions
 markdown_extensions:
   - abbr
@@ -185,5 +178,3 @@ nav:
     - style-guide/index.md
     - General Guidelines: style-guide/general.md
     - Lists: style-guide/lists.md
-  - Reference:
-    - reference/index.md

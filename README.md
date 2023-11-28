@@ -28,7 +28,7 @@ Follow these steps to install and run the portfolio locally:
 3. Run the following command to clone the repository:
 
     ```shell
-    git clone https://github.com/pablogh89/portfolio.git
+    git clone git@github.com:pablogh89/portfolio.git
     ```
 
 4. Run the following command to open the portfolio folder:
