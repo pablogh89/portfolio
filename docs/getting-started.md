@@ -17,7 +17,8 @@ Make sure you have the following software installed:
 
 Follow these steps to set up your ssh key to work with GitHub:
 
-> *Note*: Skip to [Setting up the project](#setting-up-the-project) if you already have your ssh key set up on GitHub.
+!!! note
+    Skip to [Setting up the project](#setting-up-the-project) if you already have your ssh key set up on GitHub.
 
 1. Open a Command Prompt or Terminal.
 2. Run the following command to create a ssh key:
@@ -26,24 +27,35 @@ Follow these steps to set up your ssh key to work with GitHub:
     ssh-keygen -t ed25519 -C your_email@example.com
     ```
 
-3. Open your user folder in one of the following ways:
+3. Hit the Enter key three times to accept the default values for
+
+    - SSH key location directory.
+    - Empty SSH security passcode.
+    - SSH security passcode confirmation.
+
+4. Open your user folder in one of the following ways:
 
     - Go to ``C:\Users\`` using your File Explorer and select your user folder (Windows).
-    > **Note**: Your Drive letter may be different from ``C``, adjust the path accordingly if necessary.
+
+    !!! warning
+        Your Drive letter may be different from ``C``, adjust the path accordingly if necessary.
+
     - Go to ``$HOME`` using your file explorer and select your user folder (Ubuntu).
 
-4. Open the ``.ssh`` folder
+5. Open the ``.ssh`` folder
 
-    > *Note*: You might need to indicate your explorer to show hidden files and folders.
+    !!! note
+        You might need to indicate your explorer to show hidden files and folders.
 
-5. Open the ``id_rsa.pub`` file using your preferred IDE or text editor.
+6. Open the ``id_rsa.pub`` file using your preferred IDE or text editor.
 
-    > *Note*: Disregard the default software that Windows suggests to open the file by default.
+    !!! note
+        Disregard the default software that Windows suggests to open the file by default.
 
-6. Copy the content of the file.
-7. Go to [GitHub](https://github.com/) on your browser.
-8. Click on your avatar on the top-right corner.
-9. Select **Settings**.
+7. Copy the content of the file.
+8. Go to [GitHub](https://github.com/) on your browser.
+9. Click on your avatar on the top-right corner.
+10. Select **Settings**.
 10. Click SSH and GPC keys on the left menu.
 11. Click New SSH key.
 12. Enter the following information:
@@ -53,6 +65,9 @@ Follow these steps to set up your ssh key to work with GitHub:
     - **Key**: Key value. Paste the key you copied from the ``id_rsa.pub`` file.
 
 13. Click **Add SSH key**.
+
+!!! info
+    The SSH key identifies your device and links your profile with the device.
 
 ### Setting up the project
 
@@ -83,16 +98,25 @@ Follow these steps to install and run the portfolio locally:
     pip install -r requirements.txt
     ```
 
-    !!! note
+    !!! tip
         If this fails due to access denied, add ``--user`` on Windows or start with ``sudo`` on Linux to solve the problem.
 
-6. Run the following command to start the portfolio:
+6. Run the following command to install the project template dependencies (Python packages required to run this project template):
+
+    ```shell
+    pip install mkdocs-material
+    ```
+
+    !!! tip
+        If this fails due to access denied, add ``--user`` on Windows or start with ``sudo`` on Linux to solve the problem.
+
+7. Run the following command to start the portfolio:
 
     ```shell
     python mkdocs serve 
     ```
 
-    !!! note
+    !!! tip
         If this fails, try ``python –m mkdocs serve`` on Windows or ``python3 mkdocs serve`` on Linux to solve the problem.
 
-7. Open a browser and navigate to ``http://localhost:8000/``
+8. Open a browser and navigate to ``http://localhost:8000/``

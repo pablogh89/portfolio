@@ -2,7 +2,7 @@
 
 Welcome to my documentation text portfolio.
 
-![Home page screenshot](docs/assets/screenshots/home.png)
+![Home page screenshot](docs/assets/screenshots/)
 
 Here you can find some text samples to review my writing style. Follow this guide to set up the project.
 
@@ -28,33 +28,39 @@ Follow these steps to set up your ssh key to work with GitHub:
     ssh-keygen -t ed25519 -C your_email@example.com
     ```
 
-3. Open your user folder in one of the following ways:
+3. Hit the Enter key three times to accept the default values for
+
+    - SSH key location directory.
+    - Empty SSH security passcode.
+    - SSH security passcode confirmation.
+
+4. Open your user folder in one of the following ways:
 
     - Go to ``C:\Users\`` using your File Explorer and select your user folder (Windows).
     > **Note**: Your Drive letter may be different from ``C``, adjust the path accordingly if necessary.
     - Go to ``$HOME`` using your file explorer and select your user folder (Ubuntu).
 
-4. Open the ``.ssh`` folder
+5. Open the ``.ssh`` folder
 
     > *Note*: You might need to indicate your explorer to show hidden files and folders.
 
-5. Open the ``id_rsa.pub`` file using your preferred IDE or text editor.
+6. Open the ``id_rsa.pub`` file using your preferred IDE or text editor.
 
     > *Note*: Disregard the default software that Windows suggests to open the file by default.
 
-6. Copy the content of the file.
-7. Go to [GitHub](https://github.com/) on your browser.
-8. Click on your avatar on the top-right corner.
-9. Select **Settings**.
-10. Click SSH and GPC keys on the left menu.
-11. Click New SSH key.
-12. Enter the following information:
+7. Copy the content of the file.
+8. Go to [GitHub](https://github.com/) on your browser.
+9. Click on your avatar on the top-right corner.
+10. Select **Settings**.
+11. Click SSH and GPC keys on the left menu.
+12. Click New SSH key.
+13. Enter the following information:
 
     - **Title**: Name for the key.
     - **Key type**: Key type. Keep the value by default.
     - **Key**: Key value. Paste the key you copied from the ``id_rsa.pub`` file.
 
-13. Click **Add SSH key**.
+14. Click **Add SSH key**.
 
 ### Setting up the project
 
@@ -85,8 +91,7 @@ Follow these steps to install and run the portfolio locally:
     pip install -r requirements.txt
     ```
 
-    !!! note
-        If this fails due to access denied, add ``--user`` on Windows or start with ``sudo`` on Linux to solve the problem.
+    > **Note**: If this fails due to access denied, add ``--user`` on Windows or start with ``sudo`` on Linux to solve the problem.
 
 6. Run the following command to start the portfolio:
 
@@ -94,7 +99,6 @@ Follow these steps to install and run the portfolio locally:
     python mkdocs serve 
     ```
 
-    !!! note
-        If this fails, try ``python –m mkdocs serve`` on Windows or ``python3 mkdocs serve`` on Linux to solve the problem.
+    > **Note**: If this fails, try ``python –m mkdocs serve`` on Windows or ``python3 mkdocs serve`` on Linux to solve the problem.
 
 7. Open a browser and navigate to ``http://localhost:8000/``
