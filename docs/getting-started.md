@@ -119,4 +119,15 @@ Follow these steps to install and run the portfolio locally:
     !!! tip
         If this fails, try ``python –m mkdocs serve`` on Windows or ``python3 mkdocs serve`` on Linux to solve the problem.
 
-8. Open a browser and navigate to ``http://localhost:8000/``
+8. The Command Prompt or Terminal displays the following line:
+
+    ```shell
+      Serving on http://127.0.0.1:8000/mkdocs-material/
+    ```
+
+    That indicates that the project is running on localhost.
+
+    !!! info
+        To stop the execution of the project, you can close the Command Prompt or Terminal or press ``Ctrl + C``.
+
+9. Open a browser and navigate to ``http://localhost:8000/``
