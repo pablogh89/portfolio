@@ -472,3 +472,12 @@
 .md-typeset .mdx-sponsorship-total {
   font-weight: 700;
 }
+.attribution-link{
+  font-size: small;
+  text-align: center;
+  color: #AAAAAA;
+}
+
+.attribution-link>a{
+  color: #777;
+}
