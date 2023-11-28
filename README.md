@@ -2,7 +2,7 @@
 
 Welcome to my documentation text portfolio.
 
-![Home page screenshot](docs/assets/images/home.png)
+![Home page screenshot](docs/assets/screenshots/home.png)
 
 Here you can find some text samples to review my writing style. Follow this guide to set up the project.
 
