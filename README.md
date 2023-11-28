@@ -2,7 +2,7 @@
 
 Welcome to my documentation text portfolio.
 
-![Home page screenshot](docs/assets/screenshots/)
+![Home page screenshot](docs/assets/screenshots/home.png)
 
 Here you can find some text samples to review my writing style. Follow this guide to set up the project.
 
@@ -93,7 +93,15 @@ Follow these steps to install and run the portfolio locally:
 
     > **Note**: If this fails due to access denied, add ``--user`` on Windows or start with ``sudo`` on Linux to solve the problem.
 
-6. Run the following command to start the portfolio:
+6. Run the following command to install the project template dependencies (Python packages required to run this project template):
+
+    ```shell
+    pip install mkdocs-material
+    ```
+
+    > **Note**: If this fails, try ``python –m mkdocs serve`` on Windows or ``python3 mkdocs serve`` on Linux to solve the problem.
+
+7. Run the following command to start the portfolio:
 
     ```shell
     python mkdocs serve 
@@ -101,4 +109,4 @@ Follow these steps to install and run the portfolio locally:
 
     > **Note**: If this fails, try ``python –m mkdocs serve`` on Windows or ``python3 mkdocs serve`` on Linux to solve the problem.
 
-7. Open a browser and navigate to ``http://localhost:8000/``
+8. Open a browser and navigate to ``http://localhost:8000/``

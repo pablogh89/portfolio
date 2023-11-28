@@ -172,8 +172,7 @@ markdown_extensions:
 # Page tree
 nav:
   - Home: index.md
-  - Getting started:
-    - Installation: getting-started.md
+  - Getting Started: getting-started.md
   - Style Guide:
     - style-guide/index.md
     - General Guidelines: style-guide/general.md
