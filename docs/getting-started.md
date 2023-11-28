@@ -41,7 +41,7 @@ Follow these steps to install and run the portfolio locally:
 5. Run the following command to install the project dependencies (Python packages required to run the project on your device):
 
     ```shell
-    pip install -r requirements
+    pip install -r requirements.txt
     ```
 
     !!! note
