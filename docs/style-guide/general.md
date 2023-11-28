@@ -45,13 +45,13 @@ Make sure your documentation complies with the following requirements:
         Here you can find some scenarios to better illustrate correctness:
         
         - **Do** take notes of your meetings with SMEs to make sure that the information you include is accurate.
-        - **Do** check that you understand correctly new terms with the SMEs with questions like *“So the system only saves changes once the user clicks **Save**, right?”*
+        - **Do** check that you understand correctly new terms with the SMEs with questions like *“So the system only saves changes once the user clicks **Save**, right?”*.
         - **Don’t** write any information that you’re not completely certain.
         - **Don’t** be afraid of asking questions.
 
 ## Know your audience
 
-Make sure you know who your documentation’s target audience is. Technical readers are interested in the specifics of the system’s operation while non-technical readers usually want to understand what the system can do and whether it fits their needs. You can use diagrams accordingly. For example, class diagrams tell technical readers how the system treats information on a specific level. 
+Make sure you know who your documentation’s target audience is. Technical readers are interested in the specifics of the system’s operation while non-technical readers usually want to understand what the system can do and whether it fits their needs. You can use diagrams accordingly. For example, class diagrams tell technical readers how the system treats information on a specific level.
 
 ```kroki-plantuml
 @from_file:assets/class_diagram.puml
@@ -59,15 +59,15 @@ Make sure you know who your documentation’s target audience is. Technical read
 
 ### Documentation Tone
 
-Many documentation sites use the [Diátaxis](https://diataxis.fr/) framework that categorizes documents into: 
+Many documentation sites use the [Diátaxis](https://diataxis.fr/) framework that categorizes documents into:
 
-- **Explanation**: Understanding-oriented document that introduces a concept to readers. 
-- **How-to Guides**: Task-oriented document that describes a process to readers step by step. 
-- **Reference**: Information-oriented document that specifies the details of a system to readers. 
-- **Tutorial**: Learning-oriented document that introduces readers to one or more concepts while they follow a series of steps. 
+- **Explanation**: Understanding-oriented document that introduces a concept to readers.
+- **How-to Guides**: Task-oriented document that describes a process to readers step by step.
+- **Reference**: Information-oriented document that specifies the details of a system to readers.
+- **Tutorial**: Learning-oriented document that introduces readers to one or more concepts while they follow a series of steps.
 
-Explanation documents give the most freedom regarding the tone that you can adopt to introduce readers to new concepts. Use examples whenever possible and avoid using a condescending tone. 
+Explanation documents give the most freedom regarding the tone that you can adopt to introduce readers to new concepts. Use examples whenever possible and avoid using a condescending tone.
 
-Reference documents are mostly impersonal, as they simply contain details of the system and are a series of informative statements in present tense. 
+Reference documents are mostly impersonal, as they simply contain details of the system and are a series of informative statements in present tense.
 
 Tutorials and how-to guides must use imperative sentences and avoid using *please*. This might sound as unpolite, but it is necessary to assert the authority of the documentation. These documents indicate the steps to achieve a correct operation of the system. Following them is mandatory.

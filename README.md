@@ -28,7 +28,7 @@ Follow these steps to set up your ssh key to work with GitHub:
     ssh-keygen -t ed25519 -C your_email@example.com
     ```
 
-3. Hit the Enter key three times to accept the default values for
+3. Hit the Enter key three times to accept the default values for the following:
 
     - SSH key location directory.
     - Empty SSH security passcode.
@@ -40,7 +40,7 @@ Follow these steps to set up your ssh key to work with GitHub:
     > **Note**: Your Drive letter may be different from ``C``, adjust the path accordingly if necessary.
     - Go to ``$HOME`` using your file explorer and select your user folder (Ubuntu).
 
-5. Open the ``.ssh`` folder
+5. Open the ``.ssh`` folder.
 
     > *Note*: You might need to indicate your explorer to show hidden files and folders.
 
@@ -70,8 +70,8 @@ Follow these steps to install and run the portfolio locally:
 2. Open a Command Prompt or Terminal on the folder in one of the following ways:
 
     - Open the Command Prompt or Terminal and navigate to the folder using the ``cd`` command.
-    - Type ``cmd`` on the Address Bar of your File Explorer (Windows)
-    - Right-click the folder and select **Open in Terminal** (Ubuntu)
+    - Type ``cmd`` on the Address Bar of your File Explorer (Windows).
+    - Right-click the folder and select **Open in Terminal** (Ubuntu).
 
 3. Run the following command to clone the repository:
 
@@ -119,4 +119,4 @@ Follow these steps to install and run the portfolio locally:
 
     > **Note**: To stop the execution of the project, you can close the Command Prompt or Terminal or press ``Ctrl + C``.
 
-9. Open a browser and navigate to ``http://localhost:8000/``
+9. Open a browser and navigate to ``http://localhost:8000/``.
