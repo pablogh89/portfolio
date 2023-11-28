@@ -1,0 +1,43 @@
+@startuml
+
+class Pizzeria {
+  +orderPizza(type: String): Pizza
+  +calculateTotal(pizza: Pizza): double
+  +processPayment(total: double): boolean
+}
+
+class Pizza {
+  -type: String
+  -size: String
+  -toppings: List<String>
+  -price: double
+  +getType(): String
+  +setSize(size: String): void
+  +addTopping(topping: String): void
+  +getPrice(): double
+}
+
+class Customer {
+  -name: String
+  -address: String
+  -phone: String
+  +getName(): String
+  +getAddress(): String
+  +getPhone(): String
+}
+
+class Order {
+  -orderNumber: String
+  -customer: Customer
+  -pizzas: List<Pizza>
+  +addPizza(pizza: Pizza): void
+  +getTotal(): double
+  +getCustomer(): Customer
+}
+
+Pizzeria --> Order: places
+Order "1" *-- "*" Pizza: contains
+Order --> Customer: has
+Pizza --> Pizza: inherits
+
+@enduml

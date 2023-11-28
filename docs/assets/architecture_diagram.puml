@@ -1,0 +1,46 @@
+@startuml
+!define ICONURL https://raw.githubusercontent.com/rabelendaugher/PlantUML-icon-font-sprites/v1.0/dist
+
+!define SPRITEURL https://raw.githubusercontent.com/rabelendaugher/PlantUML-sprites/v2.1/dist
+
+!define ICON size 16x16
+!define SPRITE size 20x20
+
+!define ORDER_SPRITEURL https://raw.githubusercontent.com/rabelendaugher/PlantUML-sprites/v2.1/dist/order
+!define PIZZA_SPRITEURL https://raw.githubusercontent.com/rabelendaugher/PlantUML-sprites/v2.1/dist/pizza
+!define CUSTOMER_SPRITEURL https://raw.githubusercontent.com/rabelendaugher/PlantUML-sprites/v2.1/dist/customer
+!define PAYMENT_SPRITEURL https://raw.githubusercontent.com/rabelendaugher/PlantUML-sprites/v2.1/dist/payment
+
+!define ORDER_SPRITE(sprite) ![order sprite]($ORDER_SPRITEURL/sprite_#sprite.png)
+!define PIZZA_SPRITE(sprite) ![pizza sprite]($PIZZA_SPRITEURL/sprite_#sprite.png)
+!define CUSTOMER_SPRITE(sprite) ![customer sprite]($CUSTOMER_SPRITEURL/sprite_#sprite.png)
+!define PAYMENT_SPRITE(sprite) ![payment sprite]($PAYMENT_SPRITEURL/sprite_#sprite.png)
+
+!define SPRITE_ALIGN center
+
+!define TOP_HEADER_SPRITE(sprite) !define HEADER_SPRITE ![TOP_HEADER_SPRITE(sprite)]($SPRITEURL/sprite_header.png)
+
+!define HEADER_HEIGHT 70
+
+!define NEWPAGE_TOP_HEADER_SPRITE(sprite) !define NEWPAGE_HEADER_SPRITE ![NEWPAGE_TOP_HEADER_SPRITE(sprite)]($SPRITEURL/sprite_header.png)
+!define NEWPAGE_HEADER_HEIGHT 70
+
+!define TOP_ORDER_SPRITE(sprite) !define HEADER_SPRITE ![TOP_ORDER_SPRITE(sprite)]($ORDER_SPRITEURL/sprite_header.png)
+!define ORDER_HEIGHT 50
+
+!define TOP_CUSTOMER_SPRITE(sprite) !define HEADER_SPRITE ![TOP_CUSTOMER_SPRITE(sprite)]($CUSTOMER_SPRITEURL/sprite_header.png)
+!define CUSTOMER_HEIGHT 50
+
+!define TOP_PIZZA_SPRITE(sprite) !define HEADER_SPRITE ![TOP_PIZZA_SPRITE(sprite)]($PIZZA_SPRITEURL/sprite_header.png)
+!define PIZZA_HEIGHT 50
+
+!define TOP_PAYMENT_SPRITE(sprite) !define HEADER_SPRITE ![TOP_PAYMENT_SPRITE(sprite)]($PAYMENT_SPRITEURL/sprite_header.png)
+!define PAYMENT_HEIGHT 50
+
+package "Pizzeria App" {
+  [Pizzeria] - [Order]
+  [Order] *- [Pizza]
+  [Order] o- [Customer]
+  [Order] --> [Payment]
+}
+@enduml
