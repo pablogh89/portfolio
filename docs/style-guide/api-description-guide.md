@@ -1,6 +1,6 @@
 # API Docs Description Guidelines
 
-This document defines the general guidelines that you must follow while writing descriptions for API documentation.
+This document defines the guidelines that you must follow while writing descriptions for API documentation. At the end of the document, you can find a [Sample Specification](#sample-specification) with description examples that follow these guidelines.
 
 ## General Guidelines
 
@@ -81,7 +81,7 @@ Follow these guidelines for endpoint summaries:
 - Remember that the endpoint summary is the name that the API documentation renders for the endpoint.
 - Use title casing. For example: Create Company Foo.
 
-## Example Specification
+## Sample Specification
 
 The following OpenAPI specification serves as a sample for these guidelines:
 
