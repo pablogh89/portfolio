@@ -6,3 +6,4 @@ Follow these links to learn about the guidelines regarding each scenario:
 
 - [**General Guidelines**](general.md)
 - [**List Guidelines**](lists.md)
+- [**API Docs Description Guidelines**](api-description-guide.md)

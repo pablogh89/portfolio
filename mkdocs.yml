@@ -93,6 +93,7 @@ plugins:
       minify_html: true
   - kroki
   - charts
+  - swagger-ui-tag
 
 extra_javascript:
   - https://cdn.jsdelivr.net/npm/vega@5
@@ -177,3 +178,4 @@ nav:
     - style-guide/index.md
     - General Guidelines: style-guide/general.md
     - Lists: style-guide/lists.md
+    - API Docs Descriptions: style-guide/api-description-guide.md

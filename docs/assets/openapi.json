@@ -1,0 +1,235 @@
+{
+    "openapi": "3.0.2",
+    "info": {
+        "title": "FastAPI",
+        "version": "0.1.0"
+    },
+    "paths": {
+        "/companies/{company_id}/foos": {
+            "get": {
+                "summary": "List Company foos",
+                "description": "List all the foos associated with the Company. Receives a Company ID. Returns a list of foos on success. Returns a 422 Error if the validation fails.",
+                "operationId": "list_foos_companies__company_id__foos_get",
+                "tags": ["Sample"],
+                "parameters": [
+                    {
+                        "required": true,
+                        "schema": {
+                            "title": "Company ID",
+                            "type": "string",
+                            "description": "ID of the company"
+                        },
+                        "name": "company_id",
+                        "in": "path"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "List of foos",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "title": "Company foo list",
+                                    "type": "array",
+                                    "items": {
+                                        "$ref": "#/components/schemas/_FooDTO"
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/companies/{company_id}/foos/{foo_id}": {
+            "put": {
+                "summary": "Create or update a company foo",
+                "description": "Creates or updates a foo with the given ``foo_id``. Receives the Company and foo ID as path parameters and a foo as body. Returns a foos on success. Returns a 422 Error if the validation fails.",
+                "operationId": "upsert_foo_companies__company_id__foos__foo_id__put",
+                "tags": ["Sample"],
+                "parameters": [
+                    {
+                        "required": true,
+                        "schema": {
+                            "title": "Company Id",
+                            "type": "string",
+                            "description": "ID of the company"
+                        },
+                        "name": "company_id",
+                        "in": "path"
+                    },
+                    {
+                        "required": true,
+                        "schema": {
+                            "title": "Foo Id",
+                            "type": "string",
+                            "format": "uuid",
+                            "description": "ID of the foo"
+                        },
+                        "name": "foo_id",
+                        "in": "path"
+                    }
+                ],
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "$ref": "#/components/schemas/_FooDTO"
+                            }
+                        }
+                    },
+                    "required": true
+                },
+                "responses": {
+                    "200": {
+                        "description": "The created or updated foo",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/_FooDTO"
+                                }
+                            }
+                        }
+                    },
+                    "422": {
+                        "description": "Validation Error",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "$ref": "#/components/schemas/HTTPValidationError"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "HTTPValidationError": {
+                "title": "HTTPValidationError",
+                "type": "object",
+                "properties": {
+                    "detail": {
+                        "title": "Detail",
+                        "type": "array",
+                        "description": "Validation error.",
+                        "items": {
+                            "$ref": "#/components/schemas/ValidationError"
+                        }
+                    }
+                }
+            },
+            "ValidationError": {
+                "title": "ValidationError",
+                "required": [
+                    "loc",
+                    "msg",
+                    "type"
+                ],
+                "type": "object",
+                "properties": {
+                    "loc": {
+                        "title": "Location",
+                        "type": "array",
+                        "description": "Validation error location.",
+                        "items": {
+                            "anyOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        }
+                    },
+                    "msg": {
+                        "title": "Message",
+                        "type": "string",
+                        "description": "Error message that the client can display to their users."
+                    },
+                    "type": {
+                        "title": "Error Type. Allowed values are ``Type A``, ``Type B``, and ``Type C``.",
+                        "type": "string",
+                        "enum": ["Type A", "Type B", "Type C"],
+                        "description": "Error type"
+                    }
+                }
+            },
+            "_BarDTO": {
+                "title": "_BarDTO",
+                "required": [
+                    "name",
+                    "value"
+                ],
+                "type": "object",
+                "properties": {
+                    "name": {
+                        "title": "Name",
+                        "type": "string",
+                        "description": "Bar name that the application displays."
+                    },
+                    "value": {
+                        "title": "Value",
+                        "type": "number",
+                        "description": "Bar amount that represents the quantity of bar stored in the foo. Only positive values are allowed."
+                    }
+                }
+            },
+            "_FooDTO": {
+                "title": "_FooDTO",
+                "required": [
+                    "bars"
+                ],
+                "type": "object",
+                "properties": {
+                    "id": {
+                        "title": "Id",
+                        "type": "string",
+                        "format": "uuid",
+                        "description": "ID of the foo."
+                    },
+                    "company_id": {
+                        "title": "Company Id",
+                        "type": "string",
+                        "description": "ID of the foo company."
+                    },
+                    "total": {
+                        "title": "Total",
+                        "type": "number",
+                        "description": "Sum of the foo bar amounts."
+                    },
+                    "active": {
+                        "title": "Active",
+                        "type": "boolean",
+                        "description": "Flag that indicates whether the foo is active."
+                    },
+                    "bars": {
+                        "title": "Bars",
+                        "type": "array",
+                        "description": "List of foo bars.",
+                        "items": {
+                            "$ref": "#/components/schemas/_BarDTO"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": {
+        "name": "Sample",
+        "description": "Sample tag to organize endpoints."
+    }
+}
